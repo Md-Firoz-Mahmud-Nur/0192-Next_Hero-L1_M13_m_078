@@ -31,7 +31,7 @@ const Navbar = () => {
       <h6 className="text-3xl">
         Next <span className="text-lime-300 font-bold">Hero</span>
       </h6>
-      <ul className="flex justify-between items-center space-x-4">
+      <ul className="flex justify-between items-center space-x-4 text-white">
         {links.map((link) => (
           <Link
             key={link.title}

@@ -1,5 +1,11 @@
 import AboutContents from "@/Components/AboutContents";
 import React from "react";
+import { Headland_One } from "next/font/google";
+
+const poppinsFont = Headland_One({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "About",
@@ -9,7 +15,7 @@ export const metadata = {
 
 const AboutPage = () => {
   return (
-    <div>
+    <div className={poppinsFont.className}>
       about page
       <AboutContents></AboutContents>
     </div>
