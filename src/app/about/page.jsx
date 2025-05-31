@@ -13,10 +13,21 @@ export const metadata = {
   keywords: ["about", "next", "hero", "page", "us"],
 };
 
-const AboutPage = () => {
+const getTime = async () => {
+  const res = await fetch("http://localhost:3000/time", { cache: "no-store" });
+  const data = await res.json();
+  return data.currentTime;
+};
+
+const AboutPage = async () => {
+  const currentTime = await getTime();
+
   return (
-    <div className={poppinsFont.className}>
-      about page
+    <div className={`${poppinsFont.className} px-12 py-6`}>
+      <h2>about page</h2>
+      <br />
+      <h3>Time: {currentTime}</h3>
+      <br />
       <AboutContents></AboutContents>
     </div>
   );

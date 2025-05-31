@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ServicePage = () => {
-  console.log(name);
+  // console.log(name);
 
   return (
     <div>
