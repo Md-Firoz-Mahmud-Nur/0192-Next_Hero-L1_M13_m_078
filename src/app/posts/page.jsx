@@ -5,9 +5,9 @@ import React from "react";
 
 const PostsPage = async () => {
   const postsData = await getPosts();
-  if (postsData) {
-    redirect(`/posts/${postsData[0].id}`);
-  }
+  // if (postsData) {
+  //   redirect(`/posts/${postsData[0].id}`);
+  // }
   return (
     <div className="grid grid-cols-4  gap-6 pt-24 px-12">
       {postsData?.slice(0, 5)?.map(({ title, body, id }) => (
